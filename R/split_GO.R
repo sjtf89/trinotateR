@@ -1,5 +1,5 @@
 
-split_GO <- function(x, hit = "gene_ontology_blast"){
+split_GO <- function(x, hit = "gene_ontology_BLASTX"){
    y <- x[!is.na( get(hit) ), .( get(hit), gene_id, transcript_id, prot_id) ]
 
    # split multiple annotations in backtick-delimited list
